@@ -43,12 +43,4 @@ jobs:
 
       - name: License header format (msa/black-box-tests/)
         run: mvn -T 1C license:format -f msa/black-box-tests/
-
-      - name: Set Git user information
-        run: |
-          git config user.name "ThingsBoard Bot"
-          git config user.email "noreply@thingsboard.io"
-
-      - name: Check and push changes
-        run: |
-          git diff --exit-code || git commit -am "License header format" && git push
+        
